@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DestroyButton : MonoBehaviour
 {
-    ////Start is called before the first frame update
-    ////void Start()
-    ////{
+    DestroyEvent destroyEvent = new DestroyEvent();
 
-    ////}
-
-    ////Update is called once per frame
-    ////void Update()
-    ////{
-
-    ////}
-    
-    void AddDestroyEventListener()
+    //Start is called before the first frame update
+    void Start()
     {
+        EventManager.AddDestroyEventInvoker(this);
+    }
 
+    public void AddDestroyEventListener(UnityAction listener)
+    {
+        destroyEvent.AddListener(listener);
+    }
+
+    public void HandleButtonClick()
+    {
+        destroyEvent.Invoke();
     }
 
 
