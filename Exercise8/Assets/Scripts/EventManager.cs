@@ -30,7 +30,7 @@ public static class EventManager
         }
     }
 
-    public static void AddDestoryEventListener(UnityAction listener)
+    public static void AddDestroyEventListener(UnityAction listener)
     {
         destroyEventListener = listener;
 
@@ -39,16 +39,6 @@ public static class EventManager
             destroyEventInvoker.AddDestroyEventListener(destroyEventListener);
         }
     }
-
-    #endregion
-
-
-    #region Protected Methods
-
-    #endregion
-
-
-    #region Private Methods
 
     #endregion
 }

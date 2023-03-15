@@ -7,7 +7,7 @@ public class MazeCreature : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.AddDestoryEventListener(HandleDestroyEvent);
+        EventManager.AddDestroyEventListener(HandleDestroyEvent);
     }
 
     void HandleDestroyEvent()

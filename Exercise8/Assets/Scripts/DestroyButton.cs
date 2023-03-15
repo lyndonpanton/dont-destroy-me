@@ -18,12 +18,8 @@ public class DestroyButton : MonoBehaviour
         destroyEvent.AddListener(listener);
     }
 
-    public void HandleButtonClick()
+    public void HandleButtonClicked()
     {
         destroyEvent.Invoke();
     }
-
-
-
-
 }
